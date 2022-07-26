@@ -9,20 +9,17 @@ public class SlotMaschine {
         int input;
         int token=100;
         int slot1,slot2,slot3;
-
+        boolean run=true;
         System.out.println("Slot Maschine");
         System.out.println("Token: "+ token);
-        System.out.println("press1 to play, 2 to quit");
+        System.out.println("press 1 to play, 2 to quit");
 
-        do{
-            input = terminal.nextInt();
-
+        while ((input=terminal.nextInt())!= 2) {
             slot1 = generator.nextInt(6);
             slot2 = generator.nextInt(6);
             slot3 = generator.nextInt(6);
 
-            switch (slot1)
-            {
+            switch (slot1) {
                 case 0:
                     System.out.print("Cherry ");
                     break;
@@ -42,8 +39,7 @@ public class SlotMaschine {
                     System.out.print("Bar ");
             }
 
-            switch (slot2)
-            {
+            switch (slot2) {
                 case 0:
                     System.out.print("Cherry ");
                     break;
@@ -63,8 +59,7 @@ public class SlotMaschine {
                     System.out.print("Bar ");
             }
 
-            switch (slot3)
-            {
+            switch (slot3) {
                 case 0:
                     System.out.println("Cherry");
                     break;
@@ -84,23 +79,22 @@ public class SlotMaschine {
                     System.out.println("Bar");
             }
 
-            if (slot1!= slot2 && slot1!=slot3 && slot2!=slot3) {
-            System.out.println("You lost");
-            token-=2;
-            System.out.println("Token: "+ token);
-            } else if (slot1==slot2|| slot1==slot3 || slot2==slot3){
+            if (slot1 != slot2 && slot1 != slot3 && slot2 != slot3) {
+                System.out.println("You lost");
+                token -= 2;
+                System.out.println("Token: " + token);
+            } else if (slot1 == slot2 || slot1 == slot3 || slot2 == slot3) {
                 System.out.println("Congratulations, you have won");
-                token+=2;
-                System.out.println("Token: "+ token);
-            } else if (slot1==slot2 && slot1==slot3 && slot1!=0) {
+                token += 2;
+                System.out.println("Token: " + token);
+            } else if (slot1 == slot2 && slot1 == slot3 && slot1 != 0) {
                 System.out.println("Congratulations, you won a double");
-                token+=4;
-                System.out.println("Token: "+ token);
-            } else if (slot1==0 && slot2==0 && slot3==0) {
+                token += 4;
+                System.out.println("Token: " + token);
+            } else if (slot1 == 0 && slot2 == 0 && slot3 == 0) {
                 System.out.println("Congratulations! You have won the jackpot");
-                token+=100;
+                token += 100;
             }
-        }while (input==1);
+        }
     }
-
 }
