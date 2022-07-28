@@ -14,7 +14,7 @@ public class GUI extends JFrame {
     Color cyan= new Color(13,255,255);
     Color underline = new Color(133,49,125);
     Color offblue = new Color(8,168,255);
-    private JButton spinBtn, addCoinBtn, betOneBtn, betMaxBtn, resetBtn, statBtn;
+    private JButton spinBtn, addCoinBtn, betOneBtn, betMaxBtn, resetBtn;
     private static JLabel title, creditArea, betArea,  creditAreaTitle, betAreaTitle;
     public static JLabel reel1, reel2,reel3;
     private Container contentPane;
@@ -116,14 +116,14 @@ public class GUI extends JFrame {
         betOneBtn.setEnabled(false);
         betMaxBtn.setEnabled(false);
         resetBtn.setEnabled(false);
-        statBtn.setEnabled(false);
+
     }
     private void turnOnOtherButtonsVisibility(){
         addCoinBtn.setEnabled(true);
         betOneBtn.setEnabled(true);
         betMaxBtn.setEnabled(true);
         resetBtn.setEnabled(true);
-        statBtn.setEnabled(true);
+
     }
 
     private void calculateResult() {
@@ -281,11 +281,6 @@ public class GUI extends JFrame {
         constraints.gridy = 3;
         mainPanel.add(resetBtn, constraints);
 
-        statBtn = new JButton("Statistics");
-        statBtn.setBackground(cyan);
-        constraints.gridx = 4;
-        constraints.gridy = 4;
-        mainPanel.add(statBtn, constraints);
 
         reel1.addMouseListener(new MouseAdapter() {
             @Override
@@ -371,4 +366,3 @@ public class GUI extends JFrame {
       gui.setVisible(true);
     }
 }
-
