@@ -1,6 +1,7 @@
 package slotma;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Symbol implements ISymbol {
 
@@ -22,7 +23,6 @@ public class Symbol implements ISymbol {
     public void setValue(int value) {
         this.value=value;
     }
-
     @Override
     public int getValue() {
         return value;

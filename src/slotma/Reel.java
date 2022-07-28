@@ -8,35 +8,35 @@ public class Reel {
 
     public Reel(){
         Symbol pepe = new Symbol();
-        pepe.setImage(new ImageIcon("src/slotma/pepe.png","pepe"));
+        pepe.setImage(new ImageIcon("src/slotma/cherry.png","pepe"));
         pepe.setValue(2);
         symbol.add(pepe);
 
         Symbol jack = new Symbol();
-        jack.setImage(new ImageIcon("src/slotma/jack.png","jack"));
+        jack.setImage(new ImageIcon("src/slotma/lemon.png","jack"));
         jack.setValue(3);
         symbol.add(jack);
 
         Symbol ox = new Symbol();
-        ox.setImage(new ImageIcon("src/slotma/ox.png","ox"));
+        ox.setImage(new ImageIcon("src/slotma/watermelon.png","ox"));
         ox.setValue(4);
         symbol.add(ox);
-/*
-        Symbol ox = new Symbol();
-        ox.setImage(new ImageIcon("src/slotma/.png",""));
-        ox.setValue(5);
-        symbol.add(DEFAULT);
 
-        Symbol ox = new Symbol();
-        ox.setImage(new ImageIcon("src/slotma/.png",""));
-        ox.setValue(6);
-        symbol.add(DEFAULT);
+        Symbol pengu = new Symbol();
+        pengu.setImage(new ImageIcon("src/slotma/bell.png","pengu"));
+        pengu.setValue(5);
+        symbol.add(pengu);
 
-        Symbol ox = new Symbol();
-        ox.setImage(new ImageIcon("src/slotma/.png",""));
-        ox.setValue(7);
-        symbol.add(DEFAULT);
-*/
+        Symbol bo = new Symbol();
+        bo.setImage(new ImageIcon("src/slotma/redseven.png",""));
+        bo.setValue(6);
+        symbol.add(bo);
+
+        Symbol lappentopf = new Symbol();
+        lappentopf.setImage(new ImageIcon("src/slotma/plum.png","lappentopf"));
+        lappentopf.setValue(7);
+        symbol.add(lappentopf);
+
         Collections.shuffle(symbol);
     }
 
